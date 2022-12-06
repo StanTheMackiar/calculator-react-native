@@ -4,10 +4,8 @@ import { View, Text, StyleSheet } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
 
 import { Button } from '../components/Button';
-import { styles } from '../theme/appTheme';
-
 import { useCalculator } from '../../hooks/useCalculator';
-
+import { styles } from '../theme/appTheme';
 
 
 
@@ -33,7 +31,7 @@ export const CalculatorScreen = () => {
 
   return (
     <View style={styles.calculatorContainer}>
-        <Text style={styles.smallResult}>{ lastResult > '0' ? lastResult : '' }</Text>
+        <Text style={styles.smallResult}>{ lastResult !== '0' ? lastResult : '' }</Text>
 
         <Text 
             style={styles.result}
